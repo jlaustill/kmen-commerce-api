@@ -1,0 +1,77 @@
+{
+    "_id" : NumberInt(1234),
+    "sku" : "1234",
+    "upc" : "2345",
+    "mpn" : "3456",
+    "name" : "super awesome thingy",
+    "date" : {
+        "added" : "jan 1",
+        "updated" : "feb 3"
+    },
+    "category" : {
+        "1" : "Mens",
+        "2" : "Apparel",
+        "3" : "Baselayers"
+    },
+    "websites" : [
+        "north40",
+        "flyshop"
+    ],
+    "children" : [
+        {
+            "sku" : "1234",
+            "upc" : "2345",
+            "mpn" : "3456",
+            "qoh" : NumberInt(5),
+            "price" : {
+                "current" : 5.55,
+                "sale" : 5.55,
+                "retail" : 9.99,
+                "cost" : 3.33
+            },
+            "inventory" : {
+                "1" : NumberInt(3),
+                "2" : NumberInt(5)
+            },
+            "attributes" : {
+                "color" : {
+                    "primary" : "red",
+                    "brand" : "jazzy sparkles"
+                },
+                "length" : NumberInt(34),
+                "waist" : NumberInt(34),
+                "freeShipping" : false
+            },
+            "sold" : NumberInt(55)
+        }
+    ],
+    "description" : {
+        "short" : "a thing",
+        "long" : "a real cool thing",
+        "details" : [
+            "real big",
+            "real shiny"
+        ],
+        "specifications" : "what goes here?"
+    },
+    "size" : {
+        "height" : "5cm",
+        "width" : "10cm",
+        "depth" : "20cm",
+        "weight" : NumberInt(45)
+    },
+    "reviews" : [
+        {
+            "name" : "johny boy",
+            "rating" : NumberInt(3),
+            "title" : "it are awesome",
+            "description" : "blah blah blah blah blah"
+        },
+        {
+            "name" : "janey girl",
+            "rating" : NumberInt(5),
+            "title" : "it are awesome",
+            "description" : "blah blah blah blah blah"
+        }
+    ]
+}
