@@ -1,0 +1,19 @@
+{
+  "name": "kmen-commerce-api",
+  "version": "0.0.1",
+  "description": "A test api to play around with commerce ideas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlaustill/kmen-commerce-api.git"
+  },
+  "author": "Joshua Austill",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/jlaustill/kmen-commerce-api/issues"
+  },
+  "homepage": "https://github.com/jlaustill/kmen-commerce-api#readme"
+}
