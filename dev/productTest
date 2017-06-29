@@ -4,6 +4,7 @@
     "upc" : "2345",
     "mpn" : "3456",
     "name" : "super awesome thingy",
+    "brand": "some company",
     "date" : {
         "added" : "jan 1",
         "updated" : "feb 3"
