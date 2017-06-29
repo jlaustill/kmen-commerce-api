@@ -1,7 +1,8 @@
+var environment = require("../config/environment.js");
 var faker = require("faker");
 var products = [];
 
-for (var i = 0; i < 1000 * 1000; i++) {
+for (var i = 0; i < 1 * 1000; i++) {
     products.push({
         sku: i,
         upc: i + 2,
@@ -11,4 +12,4 @@ for (var i = 0; i < 1000 * 1000; i++) {
     });
 }
 
-console.log(products);
+console.log(environment);
