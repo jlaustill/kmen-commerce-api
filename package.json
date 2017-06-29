@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jlaustill/kmen-commerce-api/issues"
   },
-  "homepage": "https://github.com/jlaustill/kmen-commerce-api#readme"
+  "homepage": "https://github.com/jlaustill/kmen-commerce-api#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }
