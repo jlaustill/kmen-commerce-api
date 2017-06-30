@@ -12,8 +12,11 @@ const productModel = function (product) {
     self.sku = product.sku;
     self.name = product.name;
     self.date = {
-        updated: product.date.updated || new Date()
+        updated: product.date.updated || new Date(),
+        created: new Date()
     };
+    self.websites = product.websites;
+    self.images = product.images;
 
     self.asJSON = function () {
         self.date.updated = new Date();
@@ -21,8 +24,11 @@ const productModel = function (product) {
             sku: self.sku.toString(),
             name: self.name.toString(),
             date: {
-                updated: self.date.updated
-            }
+                updated: self.date.updated,
+                created: self.date.created
+            },
+            websites: self.websites,
+            images: self.images
         };
     }
 };

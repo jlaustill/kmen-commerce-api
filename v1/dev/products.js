@@ -7,14 +7,47 @@ const
     MongoClient = require("mongodb").MongoClient,
     products = [];
 
+function getStores () {
+    let results = [];
+    let selection = ["Store", "FlyShop", "Plumbers Stuff"];
+    let numberOfStores = faker.random.number({ min: 1, max: selection.length - 1 });
+
+    for (let i = 0; i < numberOfStores; i++) {
+        let store =faker.random.arrayElement(selection);
+
+        if (results.indexOf(store) === -1) {
+            results.push(store);
+        }
+    }
+
+    return results;
+}
+
+function getImages() {
+    let results = [];
+    let numberOfImages = faker.random.number({min: 1, max:10});
+
+    for (let i = 0; i < numberOfImages; i++) {
+        results.push(faker.image.imageUrl(300,300));
+    }
+
+    return results;
+}
+
 MongoClient.connect(environment.connectionString, function (err, db) {
     "use strict";
     // assert.equal(null, err);
+    db
+        .db(environment.database)
+        .collection("products")
+        .drop();
 
     for (let i = 0; i < 1000; i++) {
         let product = new Product({
             sku: i,
-            name: faker.commerce.productName()
+            name: faker.commerce.productName(),
+            websites: getStores(),
+            images: getImages()
         });
 
         console.log(product.asJSON());
