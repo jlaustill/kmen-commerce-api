@@ -16,10 +16,7 @@ app.use(bodyParser.json());
 // global variable for the running directory, why isn't this a thing??
 global.__appRoot = path.normalize(__dirname);
 
-//mongoose.Promise = global.Promise;
-//mongoose.connect(environment.connectionString);
-
-app.use(require('./v1/routers'));
+app.use("/v1", require('./v1/routers'));
 
 app.use((req, res) => {
     res.sendStatus(404);
