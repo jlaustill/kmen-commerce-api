@@ -1,5 +1,7 @@
+"use strict";
+
 const path = require("path");
-global.__appRoot = path.normalize(__dirname + "/../..");
+const __appRoot = path.normalize(__dirname + "/../..");
 const
     environment = require(__appRoot + "/config/environment.js"),
     faker = require("faker"),
@@ -35,7 +37,6 @@ function getImages() {
 }
 
 MongoClient.connect(environment.connectionString, function (err, db) {
-    "use strict";
     // assert.equal(null, err);
     db
         .db(environment.database)
@@ -61,7 +62,7 @@ MongoClient.connect(environment.connectionString, function (err, db) {
 
     Promise.all(products).then(() => {
         db.close();
-    })
+    });
 
 
 }); //MongoClient.connect
